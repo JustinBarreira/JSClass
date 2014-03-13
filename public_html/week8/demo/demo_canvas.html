@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <style type="text/css">
+            canvas {
+                border: 1px solid black;
+            }
+            </style>
+    </head>
+    <body>
+        <canvas id="tutorial" width="750" height="150"></canvas>
+        
+        <script type="text/javascript">
+            
+            
+            // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
+            
+            var can = document.getElementById('tutorial');
+            var ctx = can.getContext('2d');
+            
+            var x = 0;
+                     
+            function movecanvas(){
+               
+               ctx.clearRect(0,0,can.width,can.height);
+               ctx.fillRect(x,25,50,50);
+                 var w = parseInt(can.width-100,10);
+                 if ( x < w) {
+                     x+=10;
+                 }
+                
+            }
+            
+            //setInterval(movecanvas, 50);
+            
+            console.log(can.width);
+            
+            
+            
+            var img = new Image();
+            
+            img.src = 'car_icon.jpg';
+            
+            img.addEventListener("load", function() {
+                console.log('image loaded');
+                
+                 
+              }, false);
+              
+            
+            
+            
+            
+            var carX = 0;
+            function movecanvasCar(){
+               
+              ctx.clearRect(0,0,can.width,can.height);
+              ctx.drawImage(img,carX,0);
+                 var w = parseInt(can.width-100,10);
+                 if ( carX < w) {
+                     carX+=10;
+                 }
+                
+            }
+            
+              setInterval(movecanvasCar, 50);
+                //ctx.strokeRect(50,50,50,50);
+              
+    
+    
+                
+                
+                
+          
+                
+            
+            </script>
+    </body>
+</html>
+

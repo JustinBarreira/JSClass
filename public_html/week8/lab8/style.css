@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 5, 2014, 7:34:16 PM
+    Author     : bean2_000
+*/
+
+html, body {
+                font-size: 120%;
+        }
+        
+        label {
+                font-weight: bold;
+                font-size: 130%;
+        }
+        
+        input {
+                font-size: 120%;
+        
+        }
+        
+        div{
+                font-size: 200%;
+            
+        }
+        
+        canvas {
+                border: 1px solid black;                
+        }
